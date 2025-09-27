@@ -3,6 +3,7 @@
 ## Ejercicio 2
 
 >Analicemos ¿Qué ocurre en cada caso presentado anteriormente con los operadores y porqué JS me permite esto?
+
 JS respeta la precedencia matemática de operadores, pero con sus propias reglas (por eso `**` es derecha a izquierda).
 Los operadores unarios (`++`, `--`) existen en versión pre y post, y devuelven un valor además de modificar la variable.
 Los operadores de asignación son los de menor prioridad, por eso puedes mezclarlos en expresiones largas.
