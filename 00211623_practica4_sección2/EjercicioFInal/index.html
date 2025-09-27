@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Ejercicio Final – Guía 4</title>
+    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8" />
+</head>
+
+<body>
+    <main class="container" role="main">
+        <header>
+            <div>
+                <h1>Recordatorio semanal</h1>
+                <p>Introduce un día de la semana y un mensaje personalizado. La página te dirá si tienes actividad ese
+                    día.</p>
+            </div>
+        </header>
+
+
+        <form id="form">
+            <input id="diaInput" type="text" placeholder="Ej: Lunes, martes, miércoles..."
+                aria-label="día de la semana" />
+            <input id="mensajeInput" type="text" placeholder="Mensaje de recordatorio (opcional)"
+                aria-label="mensaje personalizado" />
+
+
+            <div style="grid-column:1 / -1;display:flex;gap:8px;align-items:center;margin-top:6px">
+                <button type="submit">Recordarme</button>
+                <button type="button" class="secondary" id="hoyBtn">Usar día de hoy</button>
+                <button type="button" class="secondary" id="limpiarBtn">Limpiar</button>
+            </div>
+        </form>
+
+
+        <div class="examples" aria-hidden="false">
+            <button type="button" data-day="Lunes" data-msg="Atender cliente VIP">Ejemplo: Cliente</button>
+            <button type="button" data-day="Miércoles" data-msg="Llevar a la hija al ballet">Ejemplo: Ballet</button>
+            <button type="button" data-day="Sábado" data-msg="Plan con la esposa">Ejemplo: Sábado</button>
+        </div>
+
+
+        <div id="resultado" class="card" style="display:none" aria-live="polite">
+            <div class="status" id="icon">OK</div>
+            <div class="content">
+                <h2 id="titulo"></h2>
+                <div class="muted" id="detalle"></div>
+            </div>
+        </div>
+
+
+        <footer>
+            <div>Nota: el input acepta mayúsculas/minúsculas y tildes. Si el día no tiene actividad (ej: Domingo) se
+                mostrará un aviso.</div>
+        </footer>
+    </main>
+    <script src="./script.js"></script>
+</body>
+
+</html>
